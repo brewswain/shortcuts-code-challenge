@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface CustomButtonProps {
   children: string;
@@ -8,9 +8,6 @@ interface CustomButtonProps {
 const CustomButton = ({ children, handleClick }: CustomButtonProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
-  useEffect(() => {
-    console.log({ isHovered });
-  }, [isHovered]);
   return (
     <button
       type="button"
@@ -21,7 +18,13 @@ const CustomButton = ({ children, handleClick }: CustomButtonProps) => {
     >
       <span className="relative">
         <span>{children}</span>
-        <span className="absolute top-0 left-0 opacity-0">{children}</span>
+        <span
+          className={`absolute top-4 left-0 opacity-0 ${
+            isHovered ? "-translate-y-2/3 opacity-100 transition delay-150" : ""
+          }`}
+        >
+          {children}
+        </span>
       </span>
     </button>
   );

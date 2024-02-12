@@ -17,10 +17,20 @@ const CustomButton = ({ children, handleClick }: CustomButtonProps) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <span className="relative">
-        <span>{children}</span>
         <span
-          className={`absolute top-4 left-0 opacity-0 ${
-            isHovered ? "-translate-y-2/3 opacity-100 transition delay-150" : ""
+          className={`block ${
+            isHovered
+              ? "-translate-y-2/3 opacity-0 transition duration-500"
+              : ""
+          }`}
+        >
+          {children}
+        </span>
+        <span
+          className={`absolute w-[23ch] top-4 left-[-11.5ch] opacity-0 ${
+            isHovered
+              ? "-translate-y-2/3 opacity-100 transition duration-500"
+              : ""
           }`}
         >
           {children}

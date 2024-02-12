@@ -10,6 +10,7 @@ If the command doesn't work as expected, please input these commands one by one:
   
 That should handle everything for you! Once done, please go to :
 `localhost:3000` or whatever address is shown here in your terminal:
+
 ![image](https://github.com/brewswain/shortcuts-code-challenge/assets/6282435/018109a1-4522-4d87-8081-bb174be38057)
 
 

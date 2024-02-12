@@ -1,0 +1,27 @@
+.borderEffect {
+  width: 250px;
+  height: 50px;
+  position: relative;
+}
+
+.borderEffect:before {
+  content: "";
+  position: "absolute";
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 1px solid white;
+  animation: border-top 2s infinite;
+}
+
+@keyframes border-top {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 250px;
+    height: 0px;
+  }
+}

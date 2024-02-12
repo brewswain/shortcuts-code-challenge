@@ -20,7 +20,7 @@ const CustomButton = ({ children, handleClick }: CustomButtonProps) => {
         <span
           className={`block ${
             isHovered
-              ? "-translate-y-2/3 opacity-0 transition duration-500"
+              ? "-translate-y-[75%] opacity-0 transition duration-500"
               : ""
           }`}
         >

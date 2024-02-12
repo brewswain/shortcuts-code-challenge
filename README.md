@@ -1,3 +1,25 @@
+# Configuration
+This project uses `Yarn` as its package manager, and NextJS as its React Framework, so to get started, please copy this command:
+- `git clone https://github.com/brewswain/shortcuts-code-challenge.git && cd shortcuts-code-challenge && yarn && yarn dev`
+
+If the command doesn't work as expected, please input these commands one by one:
+- `git clone https://github.com/brewswain/shortcuts-code-challenge.git`
+- `cd shortcuts-code-challenge`
+- `yarn`
+- `yarn dev`
+  
+That should handle everything for you! Once done, please go to :
+`localhost:3000` or whatever address is shown here in your terminal:
+![image](https://github.com/brewswain/shortcuts-code-challenge/assets/6282435/018109a1-4522-4d87-8081-bb174be38057)
+
+
+
+The button should be placed in the middle of your screen:
+![image](https://github.com/brewswain/shortcuts-code-challenge/assets/6282435/3c2cf123-99f0-42be-9092-870809dfb2b0)
+
+
+# Progress Log
+
 ## 3:35PM
 
 - Challenge started to recreate this button:

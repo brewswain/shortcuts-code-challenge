@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 interface CustomButtonProps {
   children: string;
@@ -9,7 +10,7 @@ const CustomButton = ({ children, handleClick }: CustomButtonProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
-    <button
+    <motion.button
       type="button"
       className="rounded-[32px] border border-buttonIdle py-4 px-8 font-semibold text-lg text-white"
       onClick={handleClick}
@@ -36,7 +37,7 @@ const CustomButton = ({ children, handleClick }: CustomButtonProps) => {
           {children}
         </span>
       </span>
-    </button>
+    </motion.button>
   );
 };
 

@@ -5,7 +5,7 @@ import CustomButton from "./CustomButton/CustomButton";
 
 export default function Home() {
   const handleClick = () => {
-    console.log("clicked");
+    console.log("Howdy!");
   };
 
   return (

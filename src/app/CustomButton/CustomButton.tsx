@@ -7,18 +7,12 @@ interface CustomButtonProps {
 }
 
 const CustomButton = ({ children, handleClick }: CustomButtonProps) => {
-  const [isHovered, setIsHovered] = useState<boolean>(false);
-
-  const variants = {
-    hover: {
-      rotate: 360,
-    },
-  };
+  const [isHovered, setIsHovered] = useState<boolean>(false); // Set this to true to make it rotate without needing to hover while testing
 
   return (
     <motion.button
       type="button"
-      className=" relative bg-buttonIdle  font-semibold text-lg text-white z-[1] p-[2px] rounded-[32px] overflow-hidden"
+      className=" relative bg-buttonIdle  font-semibold text-lg text-white z-[1] p-[2px] rounded-[32px] overflow-hidden" // Remove 'overflow-hidden' so that you can see the actual div that's giving us the rotate effect
       onClick={handleClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -30,11 +24,15 @@ const CustomButton = ({ children, handleClick }: CustomButtonProps) => {
         style={{
           background: `${
             isHovered
-              ? "conic-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 20%,rgba(255,255,255,0) 40%)"
+              ? // This is a pretty subtle gradient, but can easily be customized to fit our client's customer scheme. Left simple on purpose for ease of experimentation.
+                // The only important colors are the first and last ones, since those are both transparent, thus giving us the "rotating line of light" illusion. Feel free to experiment!
+                "conic-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 20%,rgba(255,255,255,0) 40%)"
               : ""
           }`,
         }}
         animate={isHovered ? { rotate: 500, scale: 4 } : {}}
+        // 500 Degrees are chosen instead of 360 so that the "tail" of our chosen colour will end about where the line's "head" started. Once again, this is due to the transparency we added.
+        // Feel free to experiment as gradient is made more complex. Scale also affects how our animation looks, so feel free to mess around with that too!
         transition={isHovered ? { duration: 1, repeat: 0 } : {}}
       />
       <div className="relative bg-slate-900 rounded-[32px] w-[300px] h-[60px] z-[3]">
@@ -59,6 +57,6 @@ const CustomButton = ({ children, handleClick }: CustomButtonProps) => {
       </div>
     </motion.button>
   );
-};
+}; // 500 degrees seems to work best with this gradient, but this is cause i added transparency. This value will probably shift when we make gradient more akin to the design's needs
 
 export default CustomButton;

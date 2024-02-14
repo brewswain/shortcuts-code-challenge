@@ -26,6 +26,7 @@ const CustomButton = ({ children, handleClick }: CustomButtonProps) => {
             isHovered
               ? // This is a pretty subtle gradient, but can easily be customized to fit our client's customer scheme. Left simple on purpose for ease of experimentation.
                 // The only important colors are the first and last ones, since those are both transparent, thus giving us the "rotating line of light" illusion. Feel free to experiment!
+                // PS: You might need to change the percentage values of your colours based on how many colours you add to this gradient. For now, 40% works as the tail-end since it's just a 3 colour gradient.
                 "conic-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 20%,rgba(255,255,255,0) 40%)"
               : ""
           }`,

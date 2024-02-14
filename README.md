@@ -1,3 +1,7 @@
+# UPDATE
+
+Upon further discussion with Jason, I created a separate branch, `border-animation` , that has the completed border-animation included. Please note that I left the gradient itself to just go from transparent to white back to transparent instead of fitting the complete design parity. This was purposefully done, since I wanted emphasis on the animation's implementation instead, but I included some comments that should let you customize the gradient to fit the colour scheme if required.
+
 # Configuration
 This project uses `Yarn` as its package manager, and NextJS as its React Framework, so to get started, please copy this command:
 - `git clone https://github.com/brewswain/shortcuts-code-challenge.git && cd shortcuts-code-challenge && yarn && yarn dev`
